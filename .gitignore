@@ -1,0 +1,11 @@
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.matplotlib/
+.DS_Store
+*.log
+output_local/
+*.tmp
+verification_output/

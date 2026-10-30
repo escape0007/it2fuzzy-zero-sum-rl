@@ -1,0 +1,50 @@
+{
+  "date": "2026-10-30",
+  "independent_directory": true,
+  "python_isolated_mode": true,
+  "python": "3.13.3",
+  "models": [
+    {
+      "model": "corrected",
+      "gain_arrays_exact_match": true,
+      "arrays_checked": 7,
+      "all_arrays_finite": true,
+      "scientific_summary_exact_match": true,
+      "figures_readable": 6,
+      "rank": [
+        68,
+        68
+      ],
+      "iterations": [
+        5,
+        5
+      ],
+      "max_P_error": 1.2236823465627822e-07
+    },
+    {
+      "model": "paper_a53",
+      "gain_arrays_exact_match": true,
+      "arrays_checked": 7,
+      "all_arrays_finite": true,
+      "scientific_summary_exact_match": true,
+      "figures_readable": 6,
+      "rank": [
+        68,
+        68
+      ],
+      "iterations": [
+        5,
+        6
+      ],
+      "max_P_error": 1.1330808469267595e-07
+    }
+  ],
+  "invalid_argument_cases_passed": 5,
+  "nondefault_figure8_horizon_label_passed": true,
+  "script_sha256": "f4b7edd2e855cbd12b1cb2ac91e0b4753fa832816e4797d25e2b77c2e1bcac74",
+  "excluded_from_summary_equality": [
+    "runtime_s",
+    "args.out",
+    "新增execution_status"
+  ]
+}

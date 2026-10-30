@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""论文复现（单文件版）。
+"""论文复现
 
 Runkun Li, Wenhai Qi, Guangdeng Zong, Shun-Feng Su, Jinde Cao,
 "Reinforcement Learning-Based Optimization for Interval Type-2 Fuzzy Unknown
@@ -50,12 +50,12 @@ Q = 0.1 * np.eye(8)
 R = np.eye(2)
 Z0 = np.array([2.0, 5.0, 5.0, 2.0, 5.0, 5.0, 8.0, 8.0])
 T_WIN = 0.05                         # 积分窗口 T
-DELTA = 1e-7                         # 停止阈值 δ（逐元素）
+DELTA = 1e-7                         # 停止阈值 δ
 N_X, N_U, N_W = 8, 2, 2
 N_P = N_X * (N_X + 1) // 2           # P 的独立元素 36
 N_UNKNOWN = N_P + N_U * N_X + N_W * N_X  # 36 + 16 + 16 = 68（论文正文误写为 40）
 
-# 论文第 8 页打印的 K*、N*，仅用于事后对照，不参与学习
+# 论文第 8 页打印的 K*、N*，仅用于另外对照，不参与学习
 PAPER_K = np.array([
     [[-0.0012, 0.0006, -0.0000, -0.0028, -0.0005, -0.0003, 0.0019, -0.0005],
      [0.0013, -0.0005, -0.0001, 0.0028, 0.0007, 0.0002, -0.0038, 0.0]],
@@ -218,7 +218,7 @@ def paper_probes():
 
 
 def multisine_probes(amp_u, amp_w, seed):
-    """补充探测：四个输入通道各自使用四频正弦和，频率互不相同（论文未给出的实验设定）。"""
+    """补充探测：四个输入通道各自使用四频正弦和，频率互不相同（论文未给出相关实验设定）。"""
     freqs = np.array([[1.1, 3.7, 8.3, 17.9],     # u1
                       [1.9, 5.3, 11.6, 23.1],    # u2
                       [2.6, 6.8, 13.9, 29.3],    # w1
